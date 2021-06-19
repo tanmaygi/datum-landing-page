@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datum</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/statistics.png" type="image/png">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+</head>
+
+<body class="text-gray-500 text-lg ">
+  
+
+  <!-- Navbar -->
+
+  <header x-data="{ mobileMenuOpen : false }"
+    class="flex flex-wrap flex-row justify-between items-center md:space-x-4 bg-white py-4 px-6 relative" id="header">
+    <div>
+      <a id="header-imgnav-link " href="/" class="block">
+        <span class="sr-only">Datum</span>
+        <h1 class="font-bold text-4xl ml-4">Datum</h1>
+
+      </a>
+    </div>
+    <div>
+
+      <button @click="mobileMenuOpen = !mobileMenuOpen"
+        class="inline-block md:hidden w-8 h-8 bg-gray-200 text-gray-600 p-1">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+          </path>
+        </svg>
+      </button>
+      <nav id="nav-bar"
+        class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-white shadow-md rounded-lg md:rounded-none md:shadow-none md:bg-transparent p-6 pt-0 md:p-0"
+        :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
+        <a class="nav-link block py-1 text-gray-500 hover:text-red-400" href="/">Home</a>
+        <a class="nav-link block py-1 text-gray-500 hover:text-red-400" href="#features">How it works</a>
+        <a class="nav-link block py-1 text-gray-500 hover:text-red-400" href="#pricing">Pricing</a>
+        <a class="nav-link block py-1 text-gray-500 hover:text-red-400" href="#contact">Contact</a>
+        <Button class="text-white bg-red-400 hover:bg-red-600 px-2 rounded-lg ">
+          <a class="block py-1 " href="#">Get your free report</a>
+        </Button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-gray-600 body-font pl-26">
+ 
+   
+    
+    
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div
+     
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+    
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Get your Data Visualisation report
+          <br class="hidden lg:inline-block">
+        </h1>
+        <p class="mb-8 leading-relaxed">Grow your business with complete scientific data analysis report.
+          <br> DATA is new
+          oil, use it for your benefit.
+        </p>
+        <div class="flex justify-center">
+          <button
+            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Get
+            it now</button>
+          <button
+            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Learn
+            more</button>
+        </div>
+      </div>
+      <div class=" flex-grow lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <!-- <img id="bg" src="data2.png" alt="">  -->
+      
+        <img class="object-cover object-center rounded" alt="hero" src="images/data3.png"> 
+      
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--  2nd section Features-->
+  <section id="features" class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1"></h2>
+        <h1 class="sm:text-3xl text-7xl font-medium title-font mb-4 text-gray-900">What is data and HOW it works ?
+        </h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-2xl">Data has took over the world in the past decade and
+          everywhere you look around is a data for example facebook likes,tweets,shares everything.
+        </p>
+      </div>
+      <div class="flex justify-center ">
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/oMBE2TeH2no" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!--3 section  pricing section-->
+
+  <section id="pricing" class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Choose from wide options according to your
+          needs.</p>
+        <div class="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
+          <button class="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Monthly</button>
+          <button class="py-1 px-4 focus:outline-none">Annually</button>
+        </div>
+      </div>
+      <div class="flex justify-center -m-4">
+        <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+          <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">START</h2>
+            <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">Free</h1>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Basic report
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Query report
+            </p>
+            <!-- <p class="flex items-center text-gray-600 mb-6">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Data entry report 
+            </p> -->
+            <button
+              class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Get
+              started
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+            <!-- <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>  -->
+          </div>
+        </div>
+        <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+          <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+            <span
+              class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">PRO</h2>
+            <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+              <span>$14.99</span>
+              <span class="text-lg ml-1 font-normal text-gray-500">/mo</span>
+            </h1>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Basic report
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Query report
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Data entry report
+            </p>
+            <p class="flex items-center text-gray-600 mb-6">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Data visualisation report
+            </p>
+            <button
+              class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Start
+              14-day free trial
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+            <!-- <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>  -->
+          </div>
+        </div>
+        <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+          <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">BUSINESS</h2>
+            <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+              <span>$29.99</span>
+              <span class="text-lg ml-1 font-normal text-gray-500">/mo</span>
+            </h1>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Basic report
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Query report
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Data entry report
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Data visualisation report
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Algorithmic evaluation
+            </p>
+            <p class="flex items-center text-gray-600 mb-6">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Decision making report
+            </p>
+            <button
+              class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Start
+              14-day free trial
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+            <!-- <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>  -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- contact us form -->
+  <section id="contact" class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-xl">Feel free to contact us for any query.
+          for you.</p>
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div id="form" class="flex flex-wrap -m-2">
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+              <input type="text" id="name" name="name"
+                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                placeholder="type your name here">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+              <input type="email" id="email" name="email"
+                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                placeholder="type your email here">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+              <textarea id="message" name="message"
+                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                placeholder="message for us"></textarea>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button id="submit" type="submit"
+              class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+          </div>
+          <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+            <a class="text-indigo-500">support@datum.com</a>
+            <p class="leading-normal my-5">49 Smith St.
+              <br>Saint Cloud, MN 56301
+            </p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                  </path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                  </path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+</body>
+<footer class="flex justify-center">
+  &copy; copyright 2021 Datum All rights reserved.
+</footer>
+
+</html>
